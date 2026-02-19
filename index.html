@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhārat Darshan · Indian Heritage Sites</title>
+  <!-- Font & Icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo-area">
+        <i class="fas fa-archway logo-icon"></i>
+        <div class="logo-text">
+          <h1>Bhārat Darshan</h1>
+          <p>Timeless heritage · eternal stories</p>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Sites</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="search-cat">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search heritage..." id="searchInput">
+        <button id="searchBtn"><i class="fas fa-filter"></i> Go</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2><i class="fas fa-landmark"></i> भारत विरासत</h2>
+      <p>Explore the grandeur of Indian heritage — from the Himalayas to the Indian ocean.</p>
+    </div>
+  </section>
+
+  <section class="filter-section">
+    <div class="filter-title"><i class="fas fa-tags"></i> DISCOVER BY ERA / STYLE</div>
+    <div class="filter-pills" id="filterPills">
+      <span class="pill active" data-filter="all">🏛️ All</span>
+      <span class="pill" data-filter="ancient">⏳ Ancient</span>
+      <span class="pill" data-filter="medieval">⚔️ Medieval</span>
+      <span class="pill" data-filter="modern">🕊️ Modern</span>
+      <span class="pill" data-filter="unesco">🌟 UNESCO World</span>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="site-grid" id="heritageGrid">
+      <!-- All heritage cards injected via JavaScript -->
+    </div>
+  </main>
+
+  <section class="container">
+    <div class="newsletter">
+      <div>
+        <h3><i class="fas fa-envelope-open-text"></i>  Heritage newsletter</h3>
+        <p>Get monthly stories & virtual tours of Indian monuments</p>
+      </div>
+      <div class="newsletter-input">
+        <input type="email" placeholder="your@email.com">
+        <button>Subscribe</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Bhārat Darshan</h4>
+        <p>Celebrating the living heritage of India since 2025. A not-for-profit initiative to preserve and promote cultural legacy.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#">UNESCO sites</a>
+        <a href="#">Rock-cut caves</a>
+        <a href="#">Fort & palaces</a>
+        <a href="#">Sacred architecture</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+        </div>
+        <p style="margin-top:1rem;">contact@bharatdarshan.in</p>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 Bhārat Darshan — All images are representative, heritage belongs to all.</p>
+    </div>
+  </footer>
+<script src="script.js"></script>
+ 
+  <!-- small fix: unsplash image diversity fallback already applied -->
+</body>
+</html>
