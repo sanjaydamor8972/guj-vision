@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Member Registration</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(circle at top left, #1e90ff, #0a0f1f);
+        color: #111827;
+        padding: 16px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 420px;
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25);
+        padding: 28px 24px 24px;
+      }
+
+      .card-header {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .card-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 4px;
+      }
+
+      .card-subtitle {
+        font-size: 0.9rem;
+        color: #6b7280;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      label {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #374151;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      .required {
+        color: #ef4444;
+        margin-left: 2px;
+      }
+
+      input {
+        padding: 10px 11px;
+        border-radius: 10px;
+        border: 1px solid #d1d5db;
+        font-size: 0.95rem;
+        outline: none;
+        transition: border-color 0.15s ease, box-shadow 0.15s ease,
+          background-color 0.15s ease;
+        background-color: #f9fafb;
+      }
+
+      input:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.15);
+        background-color: #ffffff;
+      }
+
+      input.error {
+        border-color: #ef4444;
+        background-color: #fef2f2;
+      }
+
+      .error-message {
+        min-height: 16px;
+        font-size: 0.75rem;
+        color: #b91c1c;
+      }
+
+      .hint {
+        font-size: 0.75rem;
+        color: #9ca3af;
+      }
+
+      .row {
+        display: flex;
+        gap: 10px;
+      }
+
+      .row .field {
+        flex: 1;
+      }
+
+      .actions {
+        margin-top: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      button {
+        border: none;
+        border-radius: 999px;
+        padding: 10px 16px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.15s ease, transform 0.05s ease,
+          box-shadow 0.15s ease;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        color: #ffffff;
+        box-shadow: 0 10px 18px rgba(37, 99, 235, 0.35);
+      }
+
+      .btn-primary:hover {
+        background: linear-gradient(135deg, #1d4ed8, #1e40af);
+        transform: translateY(-1px);
+        box-shadow: 0 14px 24px rgba(37, 99, 235, 0.45);
+      }
+
+      .btn-primary:active {
+        transform: translateY(0);
+        box-shadow: 0 8px 16px rgba(37, 99, 235, 0.35);
+      }
+
+      .btn-secondary {
+        background-color: #f3f4f6;
+        color: #374151;
+      }
+
+      .btn-secondary:hover {
+        background-color: #e5e7eb;
+      }
+
+      .form-message {
+        margin-top: 6px;
+        font-size: 0.85rem;
+        text-align: center;
+        min-height: 18px;
+      }
+
+      .form-message.success {
+        color: #15803d;
+      }
+
+      .form-message.error {
+        color: #b91c1c;
+      }
+
+      @media (max-width: 480px) {
+        .card {
+          padding: 22px 18px 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-header">
+        <h1 class="card-title">Member Registration</h1>
+        <p class="card-subtitle">
+          Create your account to access all member features.
+        </p>
+      </div>
+
+      <form id="registrationForm" novalidate>
+        <div class="field">
+          <label for="fullName"
+            >Full Name <span class="required">*</span></label
+          >
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="John Doe"
+            autocomplete="name"
+          />
+          <div class="error-message" id="fullNameError"></div>
+        </div>
+
+        <div class="field">
+          <label for="email"
+            >Email <span class="required">*</span></label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+          />
+          <div class="error-message" id="emailError"></div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+1 555 123 4567"
+              autocomplete="tel"
+            />
+            <div class="error-message" id="phoneError"></div>
+          </div>
+
+          <div class="field">
+            <label for="age">Age</label>
+            <input
+              type="number"
+              id="age"
+              name="age"
+              min="13"
+              max="100"
+              placeholder="18"
+            />
+            <div class="error-message" id="ageError"></div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="password"
+            >Password <span class="required">*</span></label
+          >
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="At least 8 characters"
+            autocomplete="new-password"
+          />
+          <div class="error-message" id="passwordError"></div>
+          <div class="hint">
+            Minimum 8 characters, with at least one letter and one number.
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="confirmPassword"
+            >Confirm Password <span class="required">*</span></label
+          >
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            placeholder="Re-type your password"
+            autocomplete="new-password"
+          />
+          <div class="error-message" id="confirmPasswordError"></div>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn-primary">Create Account</button>
+          <button type="button" class="btn-secondary" id="resetButton">
+            Clear Form
+          </button>
+        </div>
+
+        <div id="formMessage" class="form-message"></div>
+      </form>
+    </div>
+
+    <script>
+      const form = document.getElementById("registrationForm");
+      const resetButton = document.getElementById("resetButton");
+      const formMessage = document.getElementById("formMessage");
+
+      const fields = {
+        fullName: document.getElementById("fullName"),
+        email: document.getElementById("email"),
+        phone: document.getElementById("phone"),
+        age: document.getElementById("age"),
+        password: document.getElementById("password"),
+        confirmPassword: document.getElementById("confirmPassword"),
+      };
+
+      const errors = {
+        fullName: document.getElementById("fullNameError"),
+        email: document.getElementById("emailError"),
+        phone: document.getElementById("phoneError"),
+        age: document.getElementById("ageError"),
+        password: document.getElementById("passwordError"),
+        confirmPassword: document.getElementById("confirmPasswordError"),
+      };
+
+      function setError(fieldName, message) {
+        const input = fields[fieldName];
+        const errorEl = errors[fieldName];
+        if (!input || !errorEl) return;
+        input.classList.add("error");
+        errorEl.textContent = message || "";
+      }
+
+      function clearError(fieldName) {
+        const input = fields[fieldName];
+        const errorEl = errors[fieldName];
+        if (!input || !errorEl) return;
+        input.classList.remove("error");
+        errorEl.textContent = "";
+      }
+
+      function validateName() {
+        const value = fields.fullName.value.trim();
+        clearError("fullName");
+
+        if (!value) {
+          setError("fullName", "Full name is required.");
+          return false;
+        }
+
+        if (value.length < 2) {
+          setError("fullName", "Name must be at least 2 characters.");
+          return false;
+        }
+
+        return true;
+      }
+
+      function validateEmail() {
+        const value = fields.email.value.trim();
+        clearError("email");
+
+        if (!value) {
+          setError("email", "Email is required.");
+          return false;
+        }
+
+        const emailPattern =
+          /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(value)) {
+          setError("email", "Please enter a valid email address.");
+          return false;
+        }
+
+        return true;
+      }
+
+      function validatePhone() {
+        const value = fields.phone.value.trim();
+        clearError("phone");
+
+        if (!value) {
+          return true;
+        }
+
+        const digits = value.replace(/\\D/g, "");
+        if (digits.length < 7) {
+          setError("phone", "Please enter a valid phone number.");
+          return false;
+        }
+
+        return true;
+      }
+
+      function validateAge() {
+        const value = fields.age.value.trim();
+        clearError("age");
+
+        if (!value) {
+          return true;
+        }
+
+        const age = Number(value);
+        if (Number.isNaN(age) || age < 13 || age > 100) {
+          setError("age", "Age must be between 13 and 100.");
+          return false;
+        }
+
+        return true;
+      }
+
+      function validatePassword() {
+        const value = fields.password.value;
+        clearError("password");
+
+        if (!value) {
+          setError("password", "Password is required.");
+          return false;
+        }
+
+        if (value.length < 8) {
+          setError("password", "Password must be at least 8 characters.");
+          return false;
+        }
+
+        const letterPattern = /[A-Za-z]/;
+        const numberPattern = /[0-9]/;
+        if (!letterPattern.test(value) || !numberPattern.test(value)) {
+          setError(
+            "password",
+            "Password must include at least one letter and one number."
+          );
+          return false;
+        }
+
+        return true;
+      }
+
+      function validateConfirmPassword() {
+        const password = fields.password.value;
+        const confirm = fields.confirmPassword.value;
+        clearError("confirmPassword");
+
+        if (!confirm) {
+          setError("confirmPassword", "Please confirm your password.");
+          return false;
+        }
+
+        if (password !== confirm) {
+          setError("confirmPassword", "Passwords do not match.");
+          return false;
+        }
+
+        return true;
+      }
+
+      function validateForm() {
+        formMessage.textContent = "";
+        formMessage.classList.remove("success", "error");
+
+        const isNameValid = validateName();
+        const isEmailValid = validateEmail();
+        const isPhoneValid = validatePhone();
+        const isAgeValid = validateAge();
+        const isPasswordValid = validatePassword();
+        const isConfirmPasswordValid = validateConfirmPassword();
+
+        return (
+          isNameValid &&
+          isEmailValid &&
+          isPhoneValid &&
+          isAgeValid &&
+          isPasswordValid &&
+          isConfirmPasswordValid
+        );
+      }
+
+      Object.keys(fields).forEach((key) => {
+        const input = fields[key];
+        input.addEventListener("input", () => {
+          if (input.classList.contains("error")) {
+            switch (key) {
+              case "fullName":
+                validateName();
+                break;
+              case "email":
+                validateEmail();
+                break;
+              case "phone":
+                validatePhone();
+                break;
+              case "age":
+                validateAge();
+                break;
+              case "password":
+                validatePassword();
+                validateConfirmPassword();
+                break;
+              case "confirmPassword":
+                validateConfirmPassword();
+                break;
+            }
+          }
+        });
+      });
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        Object.keys(fields).forEach((key) => clearError(key));
+
+        const isValid = validateForm();
+
+        if (!isValid) {
+          formMessage.textContent =
+            "Please fix the highlighted fields and try again.";
+          formMessage.classList.remove("success");
+          formMessage.classList.add("error");
+          return;
+        }
+
+        formMessage.textContent = "Registration successful! Welcome aboard.";
+        formMessage.classList.remove("error");
+        formMessage.classList.add("success");
+
+        const formData = {
+          fullName: fields.fullName.value.trim(),
+          email: fields.email.value.trim(),
+          phone: fields.phone.value.trim(),
+          age: fields.age.value.trim(),
+        };
+
+        console.log("Member registered:", formData);
+      });
+
+      resetButton.addEventListener("click", () => {
+        form.reset();
+        Object.keys(fields).forEach((key) => clearError(key));
+        formMessage.textContent = "";
+        formMessage.classList.remove("success", "error");
+      });
+    </script>
+  </body>
+</html>
