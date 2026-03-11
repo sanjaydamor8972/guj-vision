@@ -191,7 +191,7 @@
         </p>
       </div>
 
-      <form id="registrationForm" novalidate>
+<form id="registrationForm" action="RegisterServlet" method="post">
         <div class="field">
           <label for="fullName"
             >Full Name <span class="required">*</span></label
@@ -494,7 +494,18 @@
       });
 
       form.addEventListener("submit", (event) => {
-        event.preventDefault();
+
+    Object.keys(fields).forEach((key) => clearError(key));
+
+    const isValid = validateForm();
+
+    if (!isValid) {
+        event.preventDefault();   // only stop if invalid
+        formMessage.textContent =
+          "Please fix the highlighted fields and try again.";
+        formMessage.classList.add("error");
+    }
+});
 
         Object.keys(fields).forEach((key) => clearError(key));
 
@@ -520,7 +531,7 @@
         };
 
         console.log("Member registered:", formData);
-      });
+      
 
       resetButton.addEventListener("click", () => {
         form.reset();
