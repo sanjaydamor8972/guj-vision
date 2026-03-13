@@ -3,95 +3,125 @@
       // ---------- HERITAGE DATA (popular indian sites with details) ----------
       const heritageSites = [
         {
-          name: "Taj Mahal",
-          location: "Agra, Uttar Pradesh",
-          shortDesc: "Symbol of eternal love, white marble mausoleum.",
-          longDesc: "Built by Shah Jahan in 1653, it's a UNESCO masterpiece of Mughal architecture. The marble changes hue with sunlight.",
-          image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=2071&auto=format&fit=crop",
+          name: "Sidi Saiyyed Mosque",
+          location: "Ahmedabad, Gujarat",
+          shortDesc: "The most famous carving is the “Tree of Life” jali, which has become a symbol of Ahmedabad.",
+          longDesc: "Sidi Saiyyed during the rule of Muzaffar Shah III in 1573, the mosque is renowned for its intricate stone lattice work (jali) an exquisite example of Indo-islamic architecture.",
+          image: "images/sidi saiyad ni jali.png",
           epoch: "medieval",
           unesco: true,
-          built: "1632–1653",
-          style: "Mughal"
+          built: "1572–1573",
+          style: "Indo-Islamic Architecture"
         },
-        {
-          name: "Ajanta Caves",
-          location: "Aurangabad, Maharashtra",
-          shortDesc: "Ancient Buddhist rock-cut caves with paintings.",
-          longDesc: "Dating from 2nd century BCE, these 30 caves feature exquisite murals and sculptures depicting Jataka tales.",
-          image: "https://images.unsplash.com/photo-1623459916800-9616fecf5b81?q=80&w=2070&auto=format&fit=crop",
-          epoch: "ancient",
-          unesco: true,
-          built: "2nd century BCE – 6th century CE",
-          style: "Buddhist rock-cut"
-        },
-        {
-          name: "Khajuraho Group",
-          location: "Chhatarpur, Madhya Pradesh",
-          shortDesc: "Famous for nagara-style temples & intricate sculptures.",
-          longDesc: "Built by Chandela dynasty (950–1050 CE), these temples celebrate life, love, and spirituality through art.",
-          image: "https://images.unsplash.com/photo-160011 erm... (using fallback high-res unsplash) ",
-          // Using a reliable unsplash image: Khajuraho
-          image: "https://images.unsplash.com/photo-1582131504853-9c1d12c8a1b0?q=80&w=2070&auto=format&fit=crop",
-          epoch: "medieval",
-          unesco: true,
-          built: "950–1050 CE",
-          style: "Nagara"
-        },
-        {
-          name: "Qutub Minar",
-          location: "Delhi",
-          shortDesc: "Victory tower & UNESCO complex, Delhi's skyline.",
-          longDesc: "73m high minaret built by Qutb al-Din Aibak in 1193. Intricate carvings and iron pillar never rusts.",
-          image: "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=2076&auto=format&fit=crop",
-          epoch: "medieval",
-          unesco: true,
-          built: "1193–1368",
-          style: "Indo-Islamic"
-        },
-        {
-          name: "Mysore Palace",
-          location: "Mysuru, Karnataka",
-          shortDesc: "Official residence of Wadiyar dynasty, Indo-Saracenic.",
-          longDesc: "Originally built in 14th century, rebuilt 1912. Illuminated with 97,000 bulbs on Sundays.",
-          image: "https://images.unsplash.com/photo-1624292260236-8ea5d2c2b9b3?q=80&w=2071&auto=format&fit=crop",
-          epoch: "modern",
-          unesco: false,
-          built: "1912 (reconstruction)",
-          style: "Indo-Saracenic"
-        },
-        {
-          name: "Hampi Ruins",
-          location: "Ballari, Karnataka",
-          shortDesc: "Vijayanagara empire's ghost city, boulder landscape.",
-          longDesc: "UNESCO site with 1600+ remains: temples, markets, royal pavilions. Virupaksha temple still active.",
-          image: "https://images.unsplash.com/photo-1600118283389-9f2e8c8d9f1d?q=80&w=2070&auto=format&fit=crop",
-          epoch: "medieval",
-          unesco: true,
-          built: "14th–16th century",
-          style: "Vijayanagara"
-        },
-        {
-          name: "Sanchi Stupa",
-          location: "Raisen, Madhya Pradesh",
-          shortDesc: "Buddhist complex, great stupa commissioned by Ashoka.",
-          longDesc: "Preserves relics of Buddha. Toranas depict Jataka stories, one of India's oldest stone structures.",
-          image: "https://images.unsplash.com/photo-1613290930658-5f0a3b8b8b0d?q=80&w=2070&auto=format&fit=crop",
-          epoch: "ancient",
-          unesco: true,
-          built: "3rd century BCE",
-          style: "Buddhist"
-        },
-        {
-          name: "Gateway of India",
-          location: "Mumbai, Maharashtra",
-          shortDesc: "Triumphal arch built to commemorate King George V.",
-          longDesc: "Overlooking Arabian sea, completed in 1924. Basalt structure with Indo-Saracenic details.",
-          image: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=2074&auto=format&fit=crop",
-          epoch: "modern",
-          unesco: false,
-          built: "1924",
-          style: "Indo-Saracenic"
-        }
+        
+
+       {
+        name: "Adalaj Stepwell",
+        location: "Adalaj, Gujarat",
+        shortDesc: "A five-storey stepwell known for its detailed carvings and unique blend of Hindu and Islamic architecture.",
+        longDesc: "Adalaj Stepwell was built in 1499 by Queen Rudabai, wife of Vaghela ruler Veer Singh. The stepwell served as a water storage structure and resting place for travelers. Its walls are richly decorated with carvings of flowers, mythological scenes, and geometric patterns, reflecting a blend of Solanki and Indo-Islamic architectural styles.",
+        image: "images/adalaj step well.jpg",
+        epoch: "medieval",
+        unesco: false,
+        built: "1499",
+        style: "Solanki and Indo-Islamic Architecture"
+      },
+
+      {
+        name: "Rani ki Vav",
+        location: "Patan, Gujarat",
+        shortDesc: "A magnificent stepwell famous for its intricate sculptures and considered one of the finest examples of stepwell architecture.",
+        longDesc: "Rani ki Vav was built in the 11th century by Queen Udayamati in memory of King Bhimdev I of the Solanki dynasty. This seven-level stepwell is decorated with more than 500 sculptures depicting Hindu deities, including Vishnu. It represents the peak of Maru-Gurjara architecture and was recognized as a UNESCO World Heritage Site in 2014.",
+        image: "images/rani ni vaav.png",
+        epoch: "medieval",
+        unesco: true,
+        built: "1050–1063 CE",
+        style: "Maru-Gurjara (Solanki) Architecture"
+      },  
+
+    { 
+        name:   "Dwarkadhish Temple",
+        location: "Dwarka, Gujarat",
+        shortDesc: "One of the most important temples dedicated to Lord Krishna and a key pilgrimage site of the Char Dham.",
+        longDesc: "The Dwarkadhish Temple, also known as Jagat Mandir, is believed to be over 2000 years old though the current structure dates mainly to the 15th–16th century. The five-storey temple supported by 72 pillars rises about 78 meters high and is built in the Chalukya style of temple architecture. It remains one of the most sacred Hindu pilgrimage sites in India.",
+        image: "images/Dwarkadhis temple.png",
+        epoch: "ancient",
+        unesco: false,
+        built: "15th–16th century (current structure)",
+        style: "Chalukya Temple Architecture"
+      },
+
+      {
+        name: "uprkort fort",
+        location: "Junagadh, Gujarat",
+        shortDesc: "An ancient fort known for its massive walls, stepwells, and historical significance.",
+        longDesc: "Uparkot Fort is believed to have been originally built around 319 BCE during the Mauryan period. The fort has witnessed numerous battles and sieges throughout history. Inside the fort complex are Buddhist caves, ancient stepwells, and large cannons, making it one of the most historically significant forts in Gujarat.",
+        image: "images/uprkort fort.png",
+        epoch: "ancient",
+        unesco: false,
+        built: "c. 319 BCE",
+        style: "Ancient Indian Fort Architecture"
+      },
+
+      {
+        name: "Ashoka Rock Edicts",
+        location: "Junagadh, Gujarat",
+        shortDesc: "Ancient inscriptions carved on a rock that describe the teachings and policies of Emperor Ashoka.",
+        longDesc: "The Ashoka Rock Edicts at Junagadh were inscribed around 250 BCE during the reign of Mauryan Emperor Ashoka. Written in the Prakrit language using the Brahmi script, the inscriptions convey messages about morality, governance, and the principles of Buddhism, providing valuable historical insight into the Mauryan Empire.",
+        image: "images/Ashoka_Rock_Edict_at_Junagadh.jpg",
+        epoch: "ancient",
+        unesco: false,
+        built: "c. 250 BCE",
+        style: "Mauryan Inscriptional Rock Architecture"
+      },
+
+      {
+        name: "Jama Masjid (Champaner)",
+        location: "Champaner, Gujarat",
+        shortDesc: "A grand mosque known for its elegant domes, minarets, and beautifully carved pillars.",
+        longDesc: "The Jama Masjid of Champaner was built around 1513 by Sultan Mahmud Begada of the Gujarat Sultanate. It is considered one of the most impressive mosques in western India and combines Islamic architectural design with local Hindu craftsmanship. The monument is part of the UNESCO-listed Champaner-Pavagadh Archaeological Park.",
+        image: "images/sarangib-jama-masjid-4009599_1920.jpg",
+        epoch: "medieval",
+        unesco: true,
+        built: "c. 1513",
+        style: "Indo-Islamic Architecture"
+      },
+
+      {
+        name: "Pavagadh Hill",
+        location: "Panchmahal, Gujarat",
+        shortDesc: "A sacred volcanic hill known for the famous Kali Mata Temple and historical ruins.",
+        longDesc: "Pavagadh Hill is a volcanic formation that rises dramatically above the plains and has been an important religious site for centuries. The hill houses the revered Kali Mata Temple and forms part of the Champaner-Pavagadh Archaeological Park, a UNESCO World Heritage Site known for its historical monuments and natural beauty.",
+        image: "images/pavagadh.jpg",
+        epoch: "ancient",
+        unesco: true,
+        built: "Temple structures around 10th–11th century",
+        style: "Traditional Hindu Temple Architecture"
+      },
+
+      {
+        name: "Aina Mahal",
+        location: "Bhuj, Gujarat",
+        shortDesc: "A palace famous for its mirror work, European influences, and royal artifacts.",
+        longDesc: "Aina Mahal, also known as the Palace of Mirrors, was built around 1752 by Rao Lakhpatji of Kutch and designed by Ram Singh Malam. The palace showcases Indo-European architecture and features ornate mirror decorations, chandeliers, and glasswork inspired by European styles.",
+        image: "images/Aina_mahal.jpg_01.jpg",
+        epoch: "early modern",
+        unesco: false,
+        built: "c. 1752",
+        style: "Indo-European Architecture"
+      },
+
+      {
+        name: "Prag Mahal",
+        location: "Bhuj, Gujarat",
+        shortDesc: "A majestic palace known for its large clock tower and impressive Gothic design.",
+        longDesc: "Prag Mahal was constructed between 1865 and 1879 by Rao Pragmalji II of Kutch and designed by British architect Henry Saint Clair Wilkins. Built with Italian marble and sandstone, the palace features a grand Durbar Hall and a tall clock tower, making it one of the finest examples of Italian Gothic architecture in India.",
+        image: "images/pexels-sunny-prajapati-229756129-20312821.jpg",
+        epoch: "modern",
+        unesco: false,
+        built: "1865–1879",
+              style: "Italian Gothic Architecture"
+      }
       ];
 
       const grid = document.getElementById('heritageGrid');
@@ -188,4 +218,4 @@
         }
       });
     })();
- 
+    
